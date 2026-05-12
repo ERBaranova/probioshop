@@ -1,0 +1,33 @@
+<?php
+// Основные настройки
+define('APP_NAME',    'БиоЧист');
+define('APP_URL',     'http://localhost');
+define('APP_LOCALE',  'ru_RU');
+define('CURRENCY',    '₽');
+
+// Пути к данным
+define('DATA_PRODUCTS',    DATA . '/products/products.json');
+define('DATA_CATEGORIES',  DATA . '/products/categories.json');
+define('DATA_ORDERS',      DATA . '/orders/orders.json');
+define('DATA_USERS',       DATA . '/users/users.json');
+define('DATA_REVIEWS',     DATA . '/products/reviews.json');
+
+// Сессия
+define('SESSION_USER_KEY', 'auth_user');
+
+// Пагинация каталога
+define('PRODUCTS_PER_PAGE', 12);
+
+// Типы клиентов
+define('CLIENT_PRIVATE',  'private');   // физлицо
+define('CLIENT_BUSINESS', 'business'); // юрлицо / бизнес
+
+// Сессия админа
+define('SESSION_ADMIN_KEY', 'auth_admin');
+
+// Админ — логин/пароль хеш (сгенерируй через: php -r "echo password_hash('твой_пароль', PASSWORD_BCRYPT);")
+define('ADMIN_LOGIN',    'admin');
+define('ADMIN_PASSWORD_HASH', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'); // = "password"
+
+// B2B лиды
+define('DATA_B2B_LEADS', DATA . '/b2b/leads.json');

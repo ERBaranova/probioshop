@@ -1,0 +1,8 @@
+[
+  { "slug": "universal",    "name": "Универсальные",    "icon": "✨" },
+  { "slug": "sanitary",     "name": "Санитария",        "icon": "🚿" },
+  { "slug": "laundry",      "name": "Стирка",           "icon": "👕" },
+  { "slug": "home",         "name": "Дом и мебель",     "icon": "🏠" },
+  { "slug": "personal",     "name": "Личная гигиена",   "icon": "🤲" },
+  { "slug": "professional", "name": "Профессиональные", "icon": "💼" }
+]
