@@ -1,0 +1,20 @@
+# Данные — не храним в репозитории
+data/orders/orders.json
+data/users/users.json
+data/b2b/leads.json
+
+# Хранить структуру папок (пустые файлы-заглушки)
+!data/orders/.gitkeep
+!data/users/.gitkeep
+!data/b2b/.gitkeep
+
+# Кеш и логи
+storage/logs/*
+storage/cache/*
+!storage/logs/.gitkeep
+!storage/cache/.gitkeep
+
+# Системное
+.DS_Store
+Thumbs.db
+*.log
