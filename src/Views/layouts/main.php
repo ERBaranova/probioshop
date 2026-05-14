@@ -20,7 +20,7 @@
             <a href="/catalog?audience=private"  class="nav__link">Для дома</a>
             <a href="/b2b" class="nav__link">Для бизнеса</a>
             <a href="/catalog"                   class="nav__link">Каталог</a>
-            <a href="/#about"                    class="nav__link">Технология</a>
+            <a href="/technology"                    class="nav__link">Технология</a>
         </nav>
 
         <div class="header__actions">
@@ -61,7 +61,7 @@
         <nav class="footer__nav">
             <a href="/catalog">Каталог</a>
             <a href="/catalog?audience=business">Для бизнеса</a>
-            <a href="/#about">Технология</a>
+            <a href="/technology">Технология</a>
             <a href="/login">Личный кабинет</a>
         </nav>
     </div>
