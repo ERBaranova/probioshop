@@ -55,7 +55,7 @@
             <span style="font-size:1.2rem">🧬</span>
             <div>
                 <div style="font-weight:800;font-size:.9rem;color:var(--green-dark)"><?= APP_NAME ?></div>
-                <div class="footer__copy">Официальный дистрибьютор Chrisal в России</div>
+                <div class="footer__copy">Интернет магазин продукции Chrisal в России</div>
             </div>
         </div>
         <nav class="footer__nav">

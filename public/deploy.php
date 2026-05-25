@@ -11,8 +11,8 @@
  * 3. Замени REPO_PATH на путь к папке проекта на хостинге
  */
 
-define('DEPLOY_SECRET', 'ЗАМЕНИ_НА_СВОЙ_СЕКРЕТ');
-define('REPO_PATH',     '/home/u/USERNAME/probioshop');   // путь на хостинге
+define('DEPLOY_SECRET', 'bioclean2025secret');
+define('REPO_PATH',     '/home/c/cr087350/bioclean');   // путь на хостинге
 define('LOG_FILE',      REPO_PATH . '/storage/logs/deploy.log');
 define('BRANCH',        'main');
 
@@ -37,7 +37,7 @@ if ($branch !== 'refs/heads/' . BRANCH) {
 
 // Выполняем git pull
 $output = shell_exec(sprintf(
-    'cd %s && git pull origin %s 2>&1',
+    'cd %s && git fetch origin %s && git reset --hard origin/%s 2>&1',
     escapeshellarg(REPO_PATH),
     escapeshellarg(BRANCH)
 ));

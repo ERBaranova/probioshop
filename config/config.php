@@ -1,7 +1,7 @@
 <?php
 // Основные настройки
-define('APP_NAME',    'БиоЧист');
-define('APP_URL',     'http://localhost');
+define('APP_NAME',    'Probio-Clean');
+define('APP_URL',     'http://probio-clean.ru');
 define('APP_LOCALE',  'ru_RU');
 define('CURRENCY',    '₽');
 
@@ -27,7 +27,7 @@ define('SESSION_ADMIN_KEY', 'auth_admin');
 
 // Админ — логин/пароль хеш (сгенерируй через: php -r "echo password_hash('твой_пароль', PASSWORD_BCRYPT);")
 define('ADMIN_LOGIN',    'admin');
-define('ADMIN_PASSWORD_HASH', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'); // = "password"
+define('ADMIN_PASSWORD_HASH', '$2y$10$AE8a3lm.xOXvKmTuJNGpCuIs0yJoELHjZr7bHoa2Jnk3q8O7yoSC6cr087350'); // = "password"
 
 // B2B лиды
 define('DATA_B2B_LEADS', DATA . '/b2b/leads.json');

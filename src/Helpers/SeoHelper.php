@@ -23,7 +23,7 @@ class SeoHelper
     public function forHome(): self
     {
         $this->title       = 'Купить моющие пробиотики Chrisal — ' . APP_NAME;
-        $this->description = 'Официальный дистрибьютор Chrisal в России. Пробиотические чистящие средства без химии: работают 3 суток, безопасны для детей и животных, сертифицированы для медучреждений. Доставка по РФ.';
+        $this->description = 'Интернет магазин продукции Chrisal в России. Пробиотические чистящие средства без химии: работают 3 суток, безопасны для детей и животных, сертифицированы для медучреждений. Доставка по РФ.';
         $this->canonical   = APP_URL . '/';
         $this->ogImage     = APP_URL . '/img/og-home.jpg';
         $this->addSchema($this->schemaOrganization());
@@ -159,7 +159,7 @@ class SeoHelper
     <link rel="canonical" href="{$c}">
     <meta property="og:type"         content="website">
     <meta property="og:locale"       content="ru_RU">
-    <meta property="og:site_name"    content="БиоЧист">
+    <meta property="og:site_name"    content="Probio-Clean">
     <meta property="og:title"        content="{$t}">
     <meta property="og:description"  content="{$d}">
     <meta property="og:url"          content="{$c}">
@@ -198,7 +198,7 @@ HTML;
             'name'         => APP_NAME,
             'url'          => APP_URL,
             'logo'         => ['@type' => 'ImageObject', 'url' => APP_URL . '/img/logo.png', 'width' => 200, 'height' => 60],
-            'description'  => 'Официальный дистрибьютор Chrisal в России. Пробиотические моющие средства без химии.',
+            'description'  => 'Интернет магазин продукции Chrisal в России. Пробиотические моющие средства без химии.',
             'contactPoint' => ['@type' => 'ContactPoint', 'contactType' => 'customer service', 'availableLanguage' => ['Russian']],
         ];
     }
