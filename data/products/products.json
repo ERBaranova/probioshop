@@ -24,7 +24,7 @@
     "badge": "Хит",
     "rating": 5.0,
     "reviews_count": 9,
-    "image": "/img/products/Sanitary.png",
+    "image": "/img/products/Sanitary.webp",
     "features": [
       "Пробиотики Chrisal",
       "Для санузлов",
@@ -56,7 +56,7 @@
     "badge": "Популярное",
     "rating": 5.0,
     "reviews_count": 27,
-    "image": "/img/products/Allergy.png",
+    "image": "/img/products/Allergy.webp",
     "features": [
       "Против аллергенов",
       "Безопасно для детей",
@@ -89,7 +89,7 @@
     "badge": "",
     "rating": 0,
     "reviews_count": 1,
-    "image": "/img/products/polirol.png",
+    "image": "/img/products/polirol.webp",
     "features": [
       "Для мебели",
       "Блеск и защита",
@@ -121,7 +121,7 @@
     "badge": "Новинка",
     "rating": 4.7,
     "reviews_count": 5,
-    "image": "/img/products/Крем.png",
+    "image": "/img/products/Крем.webp",
     "features": [
       "Гипоаллергенно",
       "Восстанавливает микробиом",
@@ -154,7 +154,7 @@
     "badge": "Для бизнеса",
     "rating": 5.0,
     "reviews_count": 1,
-    "image": "/img/products/Universal.png",
+    "image": "/img/products/Universal.webp",
     "features": [
       "Все поверхности",
       "Долгодействующий эффект",
@@ -187,7 +187,7 @@
     "badge": "",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/Гель для рук.png",
+    "image": "/img/products/Гель для рук.webp",
     "features": [
       "Без спирта",
       "Восстанавливает микробиом",
@@ -219,7 +219,7 @@
     "badge": "Для бизнеса",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/+water.png",
+    "image": "/img/products/+water.webp",
     "features": [
       "Очистка водных систем",
       "Без химии",
@@ -251,7 +251,7 @@
     "badge": "Новинка",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/asid.png",
+    "image": "/img/products/asid.webp",
     "features": [
       "Удаляет ржавчину",
       "Кислотная формула",
@@ -283,7 +283,7 @@
     "badge": "Для бизнеса",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/Cmf-240.png",
+    "image": "/img/products/Cmf-240.webp",
     "features": [
       "Суперконцентрат",
       "Экономичный расход",
