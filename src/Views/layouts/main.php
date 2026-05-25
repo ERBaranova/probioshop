@@ -12,7 +12,7 @@
 <header class="header">
     <div class="container header__inner">
         <a href="/" class="logo">
-            <span class="logo__icon">🧬</span>
+            <img src="/img/logo.png" alt="Probio-Clean" style="height:36px;width:auto">
             <span><?= APP_NAME ?></span>
         </a>
 
@@ -52,7 +52,7 @@
 <footer class="footer">
     <div class="container footer__inner">
         <div style="display:flex;align-items:center;gap:8px">
-            <span style="font-size:1.2rem">🧬</span>
+            <img src="/img/logo.png" alt="Probio-Clean" style="height:28px;width:auto">
             <div>
                 <div style="font-weight:800;font-size:.9rem;color:var(--green-dark)"><?= APP_NAME ?></div>
                 <div class="footer__copy">Интернет магазин продукции Chrisal в России</div>
