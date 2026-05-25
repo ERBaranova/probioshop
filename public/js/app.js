@@ -20,19 +20,21 @@ document.addEventListener('click', async (e) => {
 
         if (data.ok) {
             btn.textContent = '✓ В корзине';
-            // Обновляем счётчик в шапке
-            const badge = document.querySelector('.cart-badge');
-            if (badge) {
-                badge.textContent = data.count;
-            } else {
-                const cartBtn = document.querySelector('.btn-cart');
-                if (cartBtn) {
-                    const b = document.createElement('span');
-                    b.className = 'cart-badge';
-                    b.textContent = data.count;
-                    cartBtn.appendChild(b);
+
+            // Обновляем или создаём badge
+            const cartBtn = document.querySelector('.btn-cart');
+            if (cartBtn) {
+                let badge = cartBtn.querySelector('.cart-badge');
+                if (badge) {
+                    badge.textContent = data.count;
+                } else {
+                    badge = document.createElement('span');
+                    badge.className = 'cart-badge';
+                    badge.textContent = data.count;
+                    cartBtn.appendChild(badge);
                 }
             }
+
             setTimeout(() => { btn.textContent = orig; btn.disabled = false; }, 2000);
         }
     } catch {
