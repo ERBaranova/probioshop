@@ -312,7 +312,7 @@ HTML;
                 'position' => $i + 1,
                 'url'      => APP_URL . '/catalog/' . $p['slug'],
                 'name'     => $p['name'],
-            ], array_slice($products, 0, 10), range(0, 9))),
+            ], array_slice($products, 0, 10), range(0, max(0, min(9, count($products) - 1))))),
         ];
     }
 
