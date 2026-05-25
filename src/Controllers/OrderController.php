@@ -61,6 +61,8 @@ class OrderController extends BaseController
             'address'     => trim($_POST['address'] ?? ''),
             'company'     => trim($_POST['company'] ?? ''),
             'comment'     => trim($_POST['comment'] ?? ''),
+            'delivery'    => trim($_POST['delivery'] ?? ''),
+            'payment'     => trim($_POST['payment'] ?? ''),
             'items'       => $items,
             'total'       => $total,
         ]);

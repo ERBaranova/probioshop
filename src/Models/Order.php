@@ -36,6 +36,8 @@ class Order extends JsonModel
             'address'     => $data['address'] ?? '',
             'company'     => $data['company'] ?? '',
             'comment'     => $data['comment'] ?? '',
+            'delivery'    => $data['delivery'] ?? '',
+            'payment'     => $data['payment'] ?? '',
             'items'       => $data['items'],
             'total'       => $data['total'],
             'status'      => 'new',       // new | processing | shipped | done | cancelled
