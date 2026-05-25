@@ -240,6 +240,13 @@ HTML;
                 'itemCondition'   => 'https://schema.org/NewCondition',
                 'priceValidUntil' => date('Y-12-31'),
                 'seller'          => ['@type' => 'Organization', 'name' => APP_NAME],
+                'hasMerchantReturnPolicy' => [
+                    '@type'            => 'MerchantReturnPolicy',
+                    'applicableCountry'=> 'RU',
+                    'returnPolicyCategory' => 'https://schema.org/MerchantReturnFiniteReturnWindow',
+                    'merchantReturnDays'   => 14,
+                    'returnMethod'         => 'https://schema.org/ReturnByMail',
+                ],
                 'shippingDetails' => [
                     '@type'        => 'OfferShippingDetails',
                     'shippingRate' => ['@type' => 'MonetaryAmount', 'value' => '0', 'currency' => 'RUB'],
