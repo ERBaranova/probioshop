@@ -31,3 +31,12 @@ define('ADMIN_PASSWORD_HASH', '$2y$10$AE8a3lm.xOXvKmTuJNGpCuIs0yJoELHjZr7bHoa2Jn
 
 // B2B лиды
 define('DATA_B2B_LEADS', DATA . '/b2b/leads.json');
+
+// Email уведомления
+define('MAIL_HOST',     'smtp.mail.ru');
+define('MAIL_PORT',     465);
+define('MAIL_USER',     'baranova-alenka221098@mail.ru');
+define('MAIL_PASSWORD', 'CPHLnMGLoPNhHYrwWirQ');
+define('MAIL_FROM',     'baranova-alenka221098@mail.ru');
+define('MAIL_NAME',     'Probio-Clean');
+define('ADMIN_EMAIL',   'baranova-alenka221098@mail.ru');

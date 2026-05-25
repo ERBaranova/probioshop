@@ -10,6 +10,7 @@ define('DATA', ROOT . '/data');
 require ROOT . '/config/config.php';
 require SRC   . '/Helpers/helpers.php';
 require SRC   . '/Helpers/SeoHelper.php';
+require SRC   . '/Helpers/Mailer.php';
 require SRC   . '/Helpers/Router.php';
 require SRC   . '/Models/JsonModel.php';
 require SRC   . '/Models/Product.php';

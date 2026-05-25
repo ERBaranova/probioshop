@@ -50,6 +50,7 @@ class B2bController extends BaseController
             'comment'     => trim($_POST['comment']     ?? ''),
         ]);
 
+        Mailer::newB2bLead($lead);
         flashSet('b2b_success', 'Заявка принята! Наш менеджер свяжется с вами в течение рабочего дня.');
         redirect('/b2b#form');
     }

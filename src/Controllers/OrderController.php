@@ -66,6 +66,8 @@ class OrderController extends BaseController
         ]);
 
         // Очищаем корзину
+        Mailer::newOrder($order);
+        Mailer::orderConfirmation($order);
         unset($_SESSION['cart']);
         $_SESSION['last_order_id'] = $order['id'];
 
