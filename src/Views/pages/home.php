@@ -355,3 +355,43 @@ renderFeatured('home');
         </div>
     </div>
 </section>
+
+<!-- ДО/ПОСЛЕ -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <div class="section__label">Результат</div>
+            <h2 class="section__title">До и после</h2>
+            <p class="section__sub">Реальные результаты применения пробиотических средств Chrisal</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:280px;gap:12px;max-width:960px;margin:0 auto">
+            <!-- горизонтальные — занимают 1 ячейку -->
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/1.webp" alt="До и после 1" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/2.webp" alt="До и после 2" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/3.webp" alt="До и после 3" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/4.webp" alt="До и после 4" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <!-- вертикальные 6 и 8 — занимают 2 строки -->
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);grid-row:span 2">
+                <img src="/img/effect/6.webp" alt="До и после 6" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/5.webp" alt="До и после 5" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/7.webp" alt="До и после 7" style="width:100%;height:100%;object-fit:cover">
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow);grid-row:span 2;grid-column:span 1">
+                <img src="/img/effect/8.webp" alt="До и после 8" style="width:100%;height:100%;object-fit:cover">
+            </div>
+        </div>
+    </div>
+</section>
