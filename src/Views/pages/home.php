@@ -317,3 +317,41 @@ renderScenarios('home');
 renderFeatured('home');
 </script>
 <?php include SRC . '/Views/components/faq.php'; ?>
+
+<!-- YOUTUBE -->
+<section class="section">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <div class="section__label">YouTube</div>
+            <h2 class="section__title">Смотрите нас на YouTube</h2>
+            <p class="section__sub">Показываем как работают пробиотики, делаем обзоры и отвечаем на вопросы</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto">
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <iframe width="100%" height="280"
+                    src="https://www.youtube.com/embed/Nhw3Ic4mlgM"
+                    title="Probio-Clean видео 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <iframe width="100%" height="280"
+                    src="https://www.youtube.com/embed/IePGtFx0mVA"
+                    title="Probio-Clean видео 2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:24px">
+            <a href="https://www.youtube.com/@probio-clean5864" target="_blank" class="btn btn--outline">
+                Все видео на канале →
+            </a>
+        </div>
+    </div>
+</section>
