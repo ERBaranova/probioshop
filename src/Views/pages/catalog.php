@@ -158,3 +158,4 @@
     .catalog-sidebar { position:static; }
 }
 </style>
+<?php include SRC . '/Views/components/faq.php'; ?>

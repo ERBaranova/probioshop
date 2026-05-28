@@ -316,3 +316,4 @@ document.querySelectorAll('.calc-toggle').forEach(el => {
 renderScenarios('home');
 renderFeatured('home');
 </script>
+<?php include SRC . '/Views/components/faq.php'; ?>

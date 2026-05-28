@@ -289,3 +289,4 @@
         </a>
     </div>
 </section>
+<?php include SRC . '/Views/components/faq.php'; ?>

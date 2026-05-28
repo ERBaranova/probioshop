@@ -27,7 +27,7 @@ define('SESSION_ADMIN_KEY', 'auth_admin');
 
 // Админ — логин/пароль хеш (сгенерируй через: php -r "echo password_hash('твой_пароль', PASSWORD_BCRYPT);")
 define('ADMIN_LOGIN',    'admin');
-define('ADMIN_PASSWORD_HASH', '$2y$10$AE8a3lm.xOXvKmTuJNGpCuIs0yJoELHjZr7bHoa2Jnk3q8O7yoSC6cr087350'); // = "password"
+define('ADMIN_PASSWORD_HASH', 'y0$/AyHZ346RioslWNHeI6th.uY6wO7V8k7iuCoJUY/T1VL9mId.wyqu');
 
 // B2B лиды
 define('DATA_B2B_LEADS', DATA . '/b2b/leads.json');
