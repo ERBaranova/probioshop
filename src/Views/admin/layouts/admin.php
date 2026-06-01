@@ -123,8 +123,8 @@
             <?php if ($newCount > 0): ?><span class="badge-new"><?= $newCount ?></span><?php endif ?>
         </a>
         <a href="/admin/products" class="<?= str_starts_with($path, '/admin/products') ? 'active' : '' ?>">🧴 Товары</a>
-        <a href="/admin/b2b"     class="<?= str_starts_with($path, '/admin/b2b') ? 'active' : '' ?>">💼 B2B заявки</a>
-        <a href="/admin/b2b"     class="<?= str_starts_with($path, '/admin/b2b') ? 'active' : '' ?>">💼 B2B заявки</a>
+        <a href="/admin/blog"     class="<?= str_starts_with($path, '/admin/blog') ? 'active' : '' ?>">📝 Блог</a>
+        <a href="/admin/b2b"      class="<?= str_starts_with($path, '/admin/b2b') ? 'active' : '' ?>">💼 B2B заявки</a>
         <a href="/admin/users"    class="<?= str_starts_with($path, '/admin/users') ? 'active' : '' ?>">👤 Пользователи</a>
     </nav>
 

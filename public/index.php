@@ -32,6 +32,11 @@ require SRC   . '/Controllers/Admin/AdminProductsController.php';
 require SRC   . '/Controllers/Admin/AdminUsersController.php';
 require SRC   . '/Controllers/Admin/AdminB2bController.php';
 
+// Блог
+require SRC   . '/Models/Blog.php';
+require SRC   . '/Controllers/BlogController.php';
+require SRC   . '/Controllers/Admin/AdminBlogController.php';
+
 session_start();
 
 $router = new Router();
@@ -91,5 +96,18 @@ $router->get('/admin/users',                     'AdminUsersController@index');
 // Админка — B2B лиды
 $router->get('/admin/b2b',                       'AdminB2bController@index');
 $router->post('/admin/b2b/{id}/status',          'AdminB2bController@updateStatus');
+
+// Блог (публичный)
+$router->get('/blog',                            'BlogController@index');
+$router->get('/blog/{slug}',                     'BlogController@show');
+
+// Блог (админка)
+$router->get('/admin/blog',                      'AdminBlogController@index');
+$router->get('/admin/blog/create',               'AdminBlogController@create');
+$router->post('/admin/blog/create',              'AdminBlogController@store');
+$router->get('/admin/blog/edit/{slug}',          'AdminBlogController@edit');
+$router->post('/admin/blog/edit/{slug}',         'AdminBlogController@update');
+$router->post('/admin/blog/delete/{slug}',       'AdminBlogController@destroy');
+$router->post('/admin/blog/toggle/{slug}',       'AdminBlogController@toggle');
 
 $router->dispatch();

@@ -63,6 +63,24 @@ function csrfVerify(): bool
     return hash_equals($_SESSION['_csrf'] ?? '', $token);
 }
 
+function formatDate(string $date): string
+{
+    $months = ['','января','февраля','марта','апреля','мая','июня',
+               'июля','августа','сентября','октября','ноября','декабря'];
+    [$y, $m, $d] = explode('-', $date);
+    return (int)$d . ' ' . $months[(int)$m] . ' ' . $y;
+}
+
+function nounForm(int $n, string $f1, string $f2, string $f5): string
+{
+    $n  = abs($n) % 100;
+    $n1 = $n % 10;
+    if ($n > 10 && $n < 20) return $f5;
+    if ($n1 > 1  && $n1 < 5) return $f2;
+    if ($n1 === 1) return $f1;
+    return $f5;
+}
+
 function slug(string $str): string
 {
     $str = mb_strtolower($str, 'UTF-8');
