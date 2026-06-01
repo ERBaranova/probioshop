@@ -1,7 +1,7 @@
 <?php
 // Основные настройки
-define('APP_NAME',    'БиоЧист');
-define('APP_URL',     'http://localhost');
+define('APP_NAME',    'Probio-Clean');
+define('APP_URL',     'http://probio-clean.ru');
 define('APP_LOCALE',  'ru_RU');
 define('CURRENCY',    '₽');
 
@@ -27,7 +27,16 @@ define('SESSION_ADMIN_KEY', 'auth_admin');
 
 // Админ — логин/пароль хеш (сгенерируй через: php -r "echo password_hash('твой_пароль', PASSWORD_BCRYPT);")
 define('ADMIN_LOGIN',    'admin');
-define('ADMIN_PASSWORD_HASH', '$2y$10$92IXUNpkjO0rOQ5byMi.Ye4oKoEa3Ro9llC/.og/at2.uheWG/igi'); // = "password"
+define('ADMIN_PASSWORD_HASH', 'y0$/AyHZ346RioslWNHeI6th.uY6wO7V8k7iuCoJUY/T1VL9mId.wyqu');
 
 // B2B лиды
 define('DATA_B2B_LEADS', DATA . '/b2b/leads.json');
+
+// Email уведомления
+define('MAIL_HOST',     'smtp.mail.ru');
+define('MAIL_PORT',     465);
+define('MAIL_USER',     'baranova-alenka221098@mail.ru');
+define('MAIL_PASSWORD', 'CPHLnMGLoPNhHYrwWirQ');
+define('MAIL_FROM',     'baranova-alenka221098@mail.ru');
+define('MAIL_NAME',     'Probio-Clean');
+define('ADMIN_EMAIL',   'baranova-alenka221098@mail.ru');

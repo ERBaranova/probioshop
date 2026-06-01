@@ -19,7 +19,7 @@
 </head>
 <body>
 <div class="card">
-    <div class="logo">🧬 БиоЧист · Админ</div>
+    <div class="logo">🧬 Probio-Clean · Админ</div>
     <?php if (!empty($error)): ?>
         <div class="alert"><?= htmlspecialchars($error, ENT_QUOTES) ?></div>
     <?php endif ?>

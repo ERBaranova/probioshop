@@ -221,3 +221,4 @@ if (addBtn) {
     });
 }
 </script>
+<?php include SRC . '/Views/components/faq.php'; ?>

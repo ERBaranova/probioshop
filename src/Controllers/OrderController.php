@@ -61,11 +61,15 @@ class OrderController extends BaseController
             'address'     => trim($_POST['address'] ?? ''),
             'company'     => trim($_POST['company'] ?? ''),
             'comment'     => trim($_POST['comment'] ?? ''),
+            'delivery'    => trim($_POST['delivery'] ?? ''),
+            'payment'     => trim($_POST['payment'] ?? ''),
             'items'       => $items,
             'total'       => $total,
         ]);
 
         // Очищаем корзину
+        Mailer::newOrder($order);
+        Mailer::orderConfirmation($order);
         unset($_SESSION['cart']);
         $_SESSION['last_order_id'] = $order['id'];
 

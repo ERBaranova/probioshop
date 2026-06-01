@@ -4,19 +4,20 @@ class CatalogController extends BaseController
     public function index(): void
     {
         $productModel = new Product();
-
         $params = [
             'audience' => $_GET['audience'] ?? '',
             'category' => $_GET['category'] ?? '',
-            'search'   => $_GET['q'] ?? '',
+            'q'        => $_GET['q'] ?? '',
             'sort'     => $_GET['sort'] ?? 'default',
         ];
 
         $products   = $productModel->filter($params);
         $categories = json_decode(file_get_contents(DATA_CATEGORIES), true) ?? [];
+        $seo        = (new SeoHelper())->forCatalog($params, $categories, $products);
 
         $this->render('pages/catalog', [
-            'title'      => 'Каталог — ' . APP_NAME,
+            'seo'        => $seo,
+            'title'      => $seo->getTitle(),
             'products'   => $products,
             'categories' => $categories,
             'params'     => $params,
@@ -25,25 +26,28 @@ class CatalogController extends BaseController
 
     public function show(array $params): void
     {
-        $productModel = new Product();
-        $product = $productModel->findBySlug($params['slug']);
+        $product = (new Product())->findBySlug($params['slug']);
 
         if (!$product) {
             http_response_code(404);
-            $this->render('pages/404', ['title' => 'Товар не найден']);
+            $seo = (new SeoHelper())->for404();
+            $this->render('pages/404', ['seo' => $seo, 'title' => $seo->getTitle()]);
             return;
         }
 
         $reviews = [];
         if (file_exists(DATA_REVIEWS)) {
-            $allReviews = json_decode(file_get_contents(DATA_REVIEWS), true) ?? [];
-            $reviews = array_filter($allReviews, fn($r) => $r['product_id'] === $product['id']);
+            $all     = json_decode(file_get_contents(DATA_REVIEWS), true) ?? [];
+            $reviews = array_values(array_filter($all, fn($r) => $r['product_id'] === $product['id']));
         }
 
+        $seo = (new SeoHelper())->forProduct($product, $reviews);
+
         $this->render('pages/product', [
-            'title'   => $product['name'] . ' — ' . APP_NAME,
+            'seo'     => $seo,
+            'title'   => $seo->getTitle(),
             'product' => $product,
-            'reviews' => array_values($reviews),
+            'reviews' => $reviews,
         ]);
     }
 }

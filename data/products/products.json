@@ -24,7 +24,7 @@
     "badge": "Хит",
     "rating": 5.0,
     "reviews_count": 9,
-    "image": "/img/products/pip-sanitary-cleaner-1l.jpg",
+    "image": "/img/products/Sanitary.webp",
     "features": [
       "Пробиотики Chrisal",
       "Для санузлов",
@@ -56,7 +56,7 @@
     "badge": "Популярное",
     "rating": 5.0,
     "reviews_count": 27,
-    "image": "/img/products/allergy-free-200ml.jpg",
+    "image": "/img/products/Allergy.webp",
     "features": [
       "Против аллергенов",
       "Безопасно для детей",
@@ -89,7 +89,7 @@
     "badge": "",
     "rating": 0,
     "reviews_count": 1,
-    "image": "/img/products/polirol-universalnaya-1l.jpg",
+    "image": "/img/products/polirol.webp",
     "features": [
       "Для мебели",
       "Блеск и защита",
@@ -121,45 +121,13 @@
     "badge": "Новинка",
     "rating": 4.7,
     "reviews_count": 5,
-    "image": "/img/products/krem-dlya-tela-10ml.jpg",
+    "image": "/img/products/Крем.webp",
     "features": [
       "Гипоаллергенно",
       "Восстанавливает микробиом",
       "Без отдушек"
     ],
     "created_at": "2024-11-04"
-  },
-  {
-    "id": "PROD-005",
-    "ozon_id": "1628277879",
-    "sku": "2035795393",
-    "barcode": "OZN2035795393",
-    "slug": "laundry-detergent-1l",
-    "name": "Laundry Detergent — гель для стирки 1 л",
-    "short_desc": "Пробиотический гель для стирки белья. Мягко для ткани и кожи.",
-    "description": "Жидкий гель для стирки Chrisal LAUNDRY DETERGENT на основе пробиотиков. Эффективно удаляет загрязнения при низких температурах (30–60°C), сохраняет цвет и структуру ткани. Гипоаллергенен, подходит для детского белья.",
-    "price": 5400,
-    "price_old": 6000,
-    "volume": 1000,
-    "unit": "мл",
-    "brand": "Chrisal",
-    "category": "laundry",
-    "type": "Жидкое средство для стирки",
-    "audience": [
-      "private"
-    ],
-    "in_stock": true,
-    "stock_fbs": 4,
-    "badge": "Новинка",
-    "rating": 4.4,
-    "reviews_count": 3,
-    "image": "/img/products/laundry-detergent-1l.jpg",
-    "features": [
-      "Стирка от 30°C",
-      "Для детского белья",
-      "Гипоаллергенно"
-    ],
-    "created_at": "2025-04-15"
   },
   {
     "id": "PROD-006",
@@ -186,7 +154,7 @@
     "badge": "Для бизнеса",
     "rating": 5.0,
     "reviews_count": 1,
-    "image": "/img/products/pip-universal-cleaner-1l.jpg",
+    "image": "/img/products/Universal.webp",
     "features": [
       "Все поверхности",
       "Долгодействующий эффект",
@@ -219,7 +187,7 @@
     "badge": "",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/gel-dlya-ruk-30ml.jpg",
+    "image": "/img/products/Гель для рук.webp",
     "features": [
       "Без спирта",
       "Восстанавливает микробиом",
@@ -251,7 +219,7 @@
     "badge": "Для бизнеса",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/pip-water-1l.jpg",
+    "image": "/img/products/+water.webp",
     "features": [
       "Очистка водных систем",
       "Без химии",
@@ -283,7 +251,7 @@
     "badge": "Новинка",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/asid-super-organic-1l.jpg",
+    "image": "/img/products/asid.webp",
     "features": [
       "Удаляет ржавчину",
       "Кислотная формула",
@@ -315,7 +283,7 @@
     "badge": "Для бизнеса",
     "rating": 0,
     "reviews_count": 0,
-    "image": "/img/products/super-cmf-240-1l.jpg",
+    "image": "/img/products/Cmf-240.webp",
     "features": [
       "Суперконцентрат",
       "Экономичный расход",

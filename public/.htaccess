@@ -20,3 +20,26 @@ RewriteRule ^sitemap\.xml$ sitemap.php [L]
         Deny from all
     </LimitExcept>
 </Files>
+Options -Indexes
+RewriteEngine On
+
+# Запрещаем доступ к data/ напрямую
+RewriteRule ^data/ - [F,L]
+
+# Статика отдаётся как есть
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# Всё остальное → index.php
+RewriteRule ^ index.php [QSA,L]
+
+# SEO: sitemap и robots напрямую
+RewriteRule ^sitemap\.xml$ sitemap.php [L]
+
+# Защита deploy.php — только POST от GitHub
+<Files "deploy.php">
+    <LimitExcept POST>
+        Deny from all
+    </LimitExcept>
+</Files>
+

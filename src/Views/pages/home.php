@@ -316,3 +316,62 @@ document.querySelectorAll('.calc-toggle').forEach(el => {
 renderScenarios('home');
 renderFeatured('home');
 </script>
+<?php include SRC . '/Views/components/faq.php'; ?>
+
+<!-- YOUTUBE -->
+<section class="section">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <div class="section__label">YouTube</div>
+            <h2 class="section__title">Смотрите нас на YouTube</h2>
+            <p class="section__sub">Показываем как работают пробиотики, делаем обзоры и отвечаем на вопросы</p>
+        </div>
+
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px;max-width:900px;margin:0 auto">
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <iframe width="100%" height="280"
+                    src="https://www.youtube.com/embed/Nhw3Ic4mlgM"
+                    title="Probio-Clean видео 1"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+            <div style="border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <iframe width="100%" height="280"
+                    src="https://www.youtube.com/embed/IePGtFx0mVA"
+                    title="Probio-Clean видео 2"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+            </div>
+        </div>
+
+        <div style="text-align:center;margin-top:24px">
+            <a href="https://www.youtube.com/@probio-clean5864" target="_blank" class="btn btn--outline">
+                Все видео на канале →
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ДО/ПОСЛЕ -->
+<section class="section section--soft">
+    <div class="container">
+        <div class="section__header section__header--center">
+            <div class="section__label">Результат</div>
+            <h2 class="section__title">До и после</h2>
+            <p class="section__sub">Реальные результаты применения пробиотических средств Chrisal</p>
+        </div>
+
+        <div style="columns:2;column-gap:12px;max-width:900px;margin:0 auto">
+            <?php foreach([1,2,3,4,5,6,7,9] as $n): ?>
+            <div style="break-inside:avoid;margin-bottom:12px;border-radius:var(--radius-lg);overflow:hidden;box-shadow:var(--shadow)">
+                <img src="/img/effect/<?= $n ?>.webp" alt="До и после <?= $n ?>"
+                     style="width:100%;display:block;max-height:480px;object-fit:cover">
+            </div>
+            <?php endforeach ?>
+        </div>
+    </div>
+</section>

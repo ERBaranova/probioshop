@@ -63,6 +63,24 @@
                            placeholder="Город, улица, дом, квартира">
                 </div>
                 <div class="form-group">
+                    <label class="form-label">Способ доставки</label>
+                    <select name="delivery" class="form-input" required>
+                        <option value="">Выберите...</option>
+                        <option value="courier">🚚 Курьер</option>
+                        <option value="post">📬 Почта России</option>
+                        <option value="sdek">📦 СДЭК</option>
+                        <option value="pickup">🏪 Самовывоз</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label class="form-label">Способ оплаты</label>
+                    <select name="payment" class="form-input" required>
+                        <option value="">Выберите...</option>
+                        <option value="cash">💵 Наличными при получении</option>
+                        <option value="card_courier">💳 Картой курьеру</option>
+                    </select>
+                </div>
+                <div class="form-group">
                     <label class="form-label">Комментарий к заказу</label>
                     <textarea name="comment" class="form-input" rows="3"
                               placeholder="Время доставки, особые пожелания..."></textarea>
