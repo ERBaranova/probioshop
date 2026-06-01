@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <?= isset($seo) ? $seo->renderMeta() : '<title>' . e($title ?? APP_NAME) . '</title>' ?>
-    <?= isset($seo) ? $seo->renderSchema() : '' ?>
+    <title><?= e($title ?? APP_NAME) ?></title>
+    <meta name="description" content="Chrisal — пробиотические моющие средства. Работают 3 суток, безопасны для детей и животных, сертифицированы для медучреждений.">
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>
@@ -12,7 +12,7 @@
 <header class="header">
     <div class="container header__inner">
         <a href="/" class="logo">
-            <img src="/img/logo.png" alt="Probio-Clean" style="height:36px;width:auto">
+            <span class="logo__icon">🧬</span>
             <span><?= APP_NAME ?></span>
         </a>
 
@@ -53,10 +53,10 @@
 <footer class="footer">
     <div class="container footer__inner">
         <div style="display:flex;align-items:center;gap:8px">
-            <img src="/img/logo.png" alt="Probio-Clean" style="height:28px;width:auto">
+            <span style="font-size:1.2rem">🧬</span>
             <div>
                 <div style="font-weight:800;font-size:.9rem;color:var(--green-dark)"><?= APP_NAME ?></div>
-                <div class="footer__copy">Интернет магазин продукции Chrisal в России</div>
+                <div class="footer__copy">Официальный дистрибьютор Chrisal в России</div>
             </div>
         </div>
         <nav class="footer__nav">
@@ -70,22 +70,5 @@
 </footer>
 
 <script src="/js/app.js"></script>
-
-<!-- Yandex.Metrika counter -->
-<script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js', 'ym');
-
-    ym(86693594, 'init', {webvisor:true, clickmap:true, referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
-</script>
-<noscript><div><img src="https://mc.yandex.ru/watch/86693594" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
-<!-- /Yandex.Metrika counter -->
-
-
-
 </body>
 </html>
