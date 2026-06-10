@@ -268,7 +268,7 @@ function renderFeatured(seg) {
   const prods = allProds.filter(s.filter).slice(0, 4);
   document.getElementById('featured-grid').innerHTML = prods.map(p => `
     <div class="product-card">
-      <a href="/catalog/${p.slug}" class="product-card__img">🧴</a>
+      <a href="/catalog/${p.slug}" class="product-card__img">${p.image ? `<img src="${p.image}" alt="${p.name}">` : `<span style="font-size:3rem">🧴</span>`}</a>
       <div class="product-card__body">
         ${p.badge ? `<span class="product-card__badge">${p.badge}</span>` : ''}
         <a href="/catalog/${p.slug}" class="product-card__name">${p.name}</a>
