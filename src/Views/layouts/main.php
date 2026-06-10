@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?= e($title ?? APP_NAME) ?></title>
-    <meta name="description" content="Chrisal — пробиотические моющие средства. Работают 3 суток, безопасны для детей и животных, сертифицированы для медучреждений.">
+    <meta name="description" content="Chrisal — пробиотические моющие средства. Работают 14 суток, безопасны для детей и животных, сертифицированы для медучреждений.">
     <link rel="stylesheet" href="/css/app.css">
 </head>
 <body>

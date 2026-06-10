@@ -110,7 +110,7 @@
         </ul>
       </div>
       <div class="article-sidebar__block article-sidebar__block--cta">
-        <p>Один флакон заменяет 8 средств. Работает 3 суток.</p>
+        <p>Один флакон заменяет 8 средств. Работает 14 суток.</p>
         <a href="/catalog" class="btn btn--primary btn--sm">В каталог</a>
       </div>
     </aside>
