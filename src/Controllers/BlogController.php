@@ -27,8 +27,9 @@ class BlogController extends BaseController
         ]);
     }
 
-    public function show(string $slug): void
+    public function show(array $params): void
     {
+        $slug = $params['slug'] ?? '';
         $article = $this->blog->getBySlug($slug);
 
         if (!$article) {
@@ -37,7 +38,7 @@ class BlogController extends BaseController
             return;
         }
 
-        $adjacent   = $this->blog->getAdjacentArticles($slug);
+        $adjacent = $this->blog->getAdjacentArticles($slug);
         $categories = $this->blog->getCategories();
         $seo        = (new SeoHelper())->forBlogArticle($article);
 

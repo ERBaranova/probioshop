@@ -51,8 +51,9 @@ class AdminBlogController extends AdminBaseController
     }
 
     /** GET /admin/blog/edit/{slug} */
-    public function edit(string $slug): void
+    public function edit(array $params): void
     {
+        $slug = $params['slug'] ?? '';
         $article = $this->blog->getBySlugAdmin($slug);
         if (!$article) {
             flashSet('error', 'Статья не найдена.');
@@ -67,8 +68,9 @@ class AdminBlogController extends AdminBaseController
     }
 
     /** POST /admin/blog/edit/{slug} */
-    public function update(string $slug): void
+    public function update(array $params): void
     {
+        $slug = $params['slug'] ?? '';
         $existing = $this->blog->getBySlugAdmin($slug);
         if (!$existing) { redirect('/admin/blog'); return; }
 
@@ -94,16 +96,18 @@ class AdminBlogController extends AdminBaseController
     }
 
     /** POST /admin/blog/delete/{slug} */
-    public function destroy(string $slug): void
+    public function destroy(array $params): void
     {
+        $slug = $params['slug'] ?? '';
         $this->blog->delete($slug);
         flashSet('success', 'Статья удалена.');
         redirect('/admin/blog');
     }
 
     /** POST /admin/blog/toggle/{slug} */
-    public function toggle(string $slug): void
+    public function toggle(array $params): void
     {
+        $slug = $params['slug'] ?? '';
         $article = $this->blog->getBySlugAdmin($slug);
         if ($article) {
             $article['published']  = !$article['published'];

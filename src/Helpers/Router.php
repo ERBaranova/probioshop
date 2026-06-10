@@ -44,12 +44,7 @@ class Router
     {
         [$class, $method] = explode('@', $handler);
         $controller = new $class();
-        // Передаём первый параметр как скалярный аргумент (если есть)
-        if (!empty($params)) {
-            $controller->$method(array_values($params)[0]);
-        } else {
-            $controller->$method();
-        }
+        $controller->$method($params);
     }
 
     private function notFound(): void
