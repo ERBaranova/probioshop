@@ -211,7 +211,7 @@ body {
 }
 .product-card:hover { box-shadow: var(--shadow); border-color: var(--green-border); }
 .product-card__img {
-  aspect-ratio: 4/3; background: var(--white);
+  aspect-ratio: 3/4; background: var(--white);
   display: flex; align-items: center; justify-content: center; font-size: 3.5rem;
   text-decoration: none; overflow: hidden;
 }
