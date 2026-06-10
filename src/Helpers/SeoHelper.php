@@ -138,6 +138,47 @@ class SeoHelper
         return $this;
     }
 
+
+    public function forBlog(string $category = '', string $search = ''): self
+    {
+        if ($search) {
+            $this->title   = 'Поиск: «' . mb_substr($search, 0, 40) . '» — Блог ' . APP_NAME;
+            $this->noindex = true;
+        } else {
+            $this->title = 'Блог — пробиотические моющие средства Chrisal';
+        }
+        $this->description = 'Статьи о пробиотических моющих средствах: как работает технология, чем опасен хлор, что такое биоплёнка и почему больницы выбирают Chrisal.';
+        $this->canonical   = APP_URL . '/blog';
+        $this->addSchema($this->schemaBreadcrumbs([
+            ['name' => 'Главная', 'url' => '/'],
+            ['name' => 'Блог',    'url' => '/blog'],
+        ]));
+        return $this;
+    }
+
+    public function forBlogArticle(array $article): self
+    {
+        $this->title       = $article['title'] . ' — ' . APP_NAME;
+        $this->description = $article['meta_description'] ?? $article['preview'];
+        $this->canonical   = APP_URL . '/blog/' . $article['slug'];
+        $this->ogImage     = APP_URL . '/img/og-home.jpg';
+        $this->addSchema([
+            '@context'         => 'https://schema.org',
+            '@type'            => 'Article',
+            'headline'         => $article['title'],
+            'description'      => $article['meta_description'] ?? $article['preview'],
+            'datePublished'    => $article['published_at'],
+            'dateModified'     => $article['updated_at'] ?? $article['published_at'],
+            'publisher'        => ['@type' => 'Organization', 'name' => APP_NAME, 'url' => APP_URL],
+            'mainEntityOfPage' => ['@type' => 'WebPage', '@id' => APP_URL . '/blog/' . $article['slug']],
+        ]);
+        $this->addSchema($this->schemaBreadcrumbs([
+            ['name' => 'Главная',         'url' => '/'],
+            ['name' => 'Блог',            'url' => '/blog'],
+            ['name' => $article['title'], 'url' => '/blog/' . $article['slug']],
+        ]));
+        return $this;
+    }
     public function for404(): self      { $this->title = 'Страница не найдена — ' . APP_NAME; $this->noindex = true; return $this; }
 
     // ─── HTML ────────────────────────────────────────────────────────────────

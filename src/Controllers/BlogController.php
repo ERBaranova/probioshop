@@ -9,9 +9,6 @@ class BlogController extends BaseController
         $this->blog = new Blog();
     }
 
-    /**
-     * GET /blog
-     */
     public function index(): void
     {
         $category = $_GET['category'] ?? '';
@@ -19,9 +16,10 @@ class BlogController extends BaseController
 
         $articles   = $this->blog->getAll($category, $search);
         $categories = $this->blog->getCategories();
+        $seo        = (new SeoHelper())->forBlog($category, $search);
 
         $this->render('pages/blog', [
-            'title'      => 'Блог — ' . APP_NAME,
+            'seo'        => $seo,
             'articles'   => $articles,
             'categories' => $categories,
             'category'   => $category,
@@ -29,28 +27,25 @@ class BlogController extends BaseController
         ]);
     }
 
-    /**
-     * GET /blog/{slug}
-     */
     public function show(string $slug): void
     {
         $article = $this->blog->getBySlug($slug);
 
         if (!$article) {
             http_response_code(404);
-            $this->render('pages/404', ['title' => 'Страница не найдена']);
+            $this->render('pages/404', ['seo' => (new SeoHelper())->for404()]);
             return;
         }
 
         $adjacent   = $this->blog->getAdjacentArticles($slug);
         $categories = $this->blog->getCategories();
+        $seo        = (new SeoHelper())->forBlogArticle($article);
 
         $this->render('pages/blog_article', [
-            'title'       => $article['title'] . ' — ' . APP_NAME,
-            'description' => $article['meta_description'] ?? $article['preview'],
-            'article'     => $article,
-            'adjacent'    => $adjacent,
-            'categories'  => $categories,
+            'seo'        => $seo,
+            'article'    => $article,
+            'adjacent'   => $adjacent,
+            'categories' => $categories,
         ]);
     }
 }
