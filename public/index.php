@@ -1,7 +1,5 @@
 <?php
 declare(strict_types=1);
-ini_set('display_errors', 1);
-error_reporting(E_ALL);
 
 define('ROOT', dirname(__DIR__));
 define('SRC',  ROOT . '/src');
